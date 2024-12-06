@@ -1,12 +1,12 @@
-document.getElementById("contact-form").addEventListener("submit", function(event) {
-    event.preventDefault();
-    
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
-    const message = document.getElementById("message").value;
-  
-    alert(`Thank you for reaching out, ${name}! We'll get back to you shortly.`);
-    
-    document.getElementById("contact-form").reset();
-  });
-  
+// Function to add two numbers
+function name(firstname, lastname) {
+  return firstname + lastname;
+}
+
+// Function to subtract two numbers
+function address(firstaddress, secondaddress) {
+  return firstaddress+secondaddress;
+}
+
+// Export the functions so that they can be tested
+module.exports = { name,address };
