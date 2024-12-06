@@ -1,0 +1,16 @@
+{
+  "name": "gopal-website",
+  "version": "1.0.0",
+  "main": "script.js",
+  "scripts": {
+    "build": "if not exist build (mkdir build) && robocopy .\\ .\\build\\ /E /XD .\\build > nul || exit /b 0 && echo 'Static files are in build/'",
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
