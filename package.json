@@ -3,10 +3,14 @@
   "version": "1.0.0",
   "main": "script.js",
   "scripts": {
-    "build": "mkdir -p build && rsync -av --exclude build/ ./ build/ && echo 'Static files are in build/'"
+    "build": "if not exist build (mkdir build) && robocopy .\\ .\\build\\ /E /XD .\\build > nul || exit /b 0 && echo 'Static files are in build/'",
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
 }
